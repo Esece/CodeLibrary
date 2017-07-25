@@ -1,6 +1,6 @@
 using System;
 
-namespace S78
+namespace S78.Extensions
 {
     public static class UriExtensions
     {
