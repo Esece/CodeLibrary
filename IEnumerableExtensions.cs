@@ -38,5 +38,49 @@ namespace S78.Extensions
                 return all[0];
             }
         }
+        
+        public static IEnumerable<T[]> TakeEvery<T>(this IEnumerable<T> source, int every)
+        {
+            var group = new List<T>(every);
+
+            foreach (var element in source)
+            {
+                if (group.Count == every)
+                {
+                    yield return group.ToArray();
+
+                    group = new List<T>(every);
+                }
+
+                group.Add(element);
+            }
+
+            if (group.Count > 0)
+            {
+                yield return group.ToArray();
+            }
+        }
+        
+        public static IEnumerable<T> TakeUniqueSequence<T>(this IEnumerable<T> source)
+        {
+            bool first = true;
+            T previous = default(T);
+            var type = typeof(T);
+
+            foreach (T s in source)
+            {
+                if (first)
+                {
+                    previous = s;
+                    yield return s;
+                    first = false;
+                }
+                else if (!EqualityComparer<T>.Default.Equals(s, previous))
+                {
+                    yield return s;
+                    previous = s;
+                }
+            }
+        }
     }
 }
