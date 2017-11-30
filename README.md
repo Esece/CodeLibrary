@@ -1,6 +1,7 @@
 # Extensions
 A collection of extension methods
 
+
 ## IEnumerableExtensions
 
 ### Median
