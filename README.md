@@ -21,3 +21,9 @@ var group = source.TakeEvery(3).Skip(1).Take(1);  // { 3, 4, 5 }
 var source = "Mississippi";
 var group = source.TakeUniqueSequence();  // { 'M', 'i', 's', 'i', 's', 'i', 'p', 'i' }
 ```
+
+### TakeWhile
+``` csharp
+var source = new[] { 2, 5, 7, 11 };
+var firstGroup = source.TakeWhile(n => n < 10);  // { 2, 5, 7 }
+```
