@@ -41,6 +41,11 @@ namespace S78.Extensions
         
         public static IEnumerable<T[]> TakeEvery<T>(this IEnumerable<T> source, int every)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+            
             var group = new List<T>(every);
 
             foreach (var element in source)
@@ -63,6 +68,11 @@ namespace S78.Extensions
         
         public static IEnumerable<T> TakeUniqueSequence<T>(this IEnumerable<T> source)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+            
             bool first = true;
             T previous = default(T);
             var type = typeof(T);
@@ -80,6 +90,29 @@ namespace S78.Extensions
                     yield return s;
                     previous = s;
                 }
+            }
+        }
+        
+        public static IEnumerable<T> TakeWhile<T>(this IEnumerable<T> source, Func<T, bool> predicate)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+            
+            if (predicate == null)
+            {
+                throw new ArgumentNullException(nameof(predicate));
+            }
+            
+            foreach (var s in source)
+            {
+                if (!predicate(s))
+                {
+                    break;
+                }
+
+                yield return s;
             }
         }
     }
