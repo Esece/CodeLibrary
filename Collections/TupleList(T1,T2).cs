@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace S78.Collections
+namespace Esece.Collections
 {
     public class TupleList<T1, T2> : List<Tuple<T1, T2>>
     {
