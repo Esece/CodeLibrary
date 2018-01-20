@@ -1,5 +1,5 @@
-# Core
-The collection of source code of custom, reusable components
+# Extensions
+A collection of extension methods
 
 
 ## IEnumerableExtensions
