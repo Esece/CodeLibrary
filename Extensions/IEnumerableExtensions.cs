@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace S78.Extensions
+namespace Esece.Extensions
 {
     public static class IEnumerableExtensions
     {
