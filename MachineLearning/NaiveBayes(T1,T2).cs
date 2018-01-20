@@ -1,4 +1,4 @@
-namespace S78
+namespace Esece
 {
     public class NaiveBayes<T1, T2>
     {
