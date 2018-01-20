@@ -1,7 +1,7 @@
 using System;
 using S78;
 
-namespace S78.Extensions
+namespace Esece.Extensions
 {
     public static class ObjectExtensions
     {
