@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace S78.Collections
+namespace Esece.Collections
 {
     public class SizedQueue<T> : Queue<T>
     {
