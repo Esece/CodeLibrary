@@ -1,6 +1,6 @@
 using System;
 
-namespace S78
+namespace Esece
 {
     public class DeepObjectComparer
     {
