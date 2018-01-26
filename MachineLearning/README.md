@@ -2,8 +2,12 @@
 
 ### KMeansClustering
 Pattern recognition
+```csharp
+const int clusterCount = 3;
+int[] clustering = new KMeansClustring(clusterCount).GetClusterIndeces(data);
+```
 
-Data:
+Sample Data:
 
 |Label|Value 1|Value 2|Value 3|
 |-----|-------|-------|-------|
@@ -31,26 +35,26 @@ Data:
 
 Result:
 
-|Cluster Index|
-|-------------|
-|0| 
-|1| 
-|2| 
-|2| 
-|1| 
-|1| 
-|2| 
-|0| 
-|2| 
-|2| 
-|1| 
-|0| 
-|1| 
-|0| 
-|0| 
-|2| 
-|1| 
-|1| 
-|0| 
-|0| 
-|2| 
+|Label|Cluster Index|
+|-----|-------------|
+|portland|0| 
+|dallas|1| 
+|birmingham|2| 
+|miami|2| 
+|new york|1| 
+|chicago|1| 
+|detroit|2| 
+|boston|0| 
+|tucsan|2| 
+|las vegas|2| 
+|sacramento|1| 
+|san diego|0| 
+|seattle|1| 
+|boise|0| 
+|lincoln|0| 
+|madison|2| 
+|crown point|1| 
+|dunbar|1| 
+|lexington|0| 
+|denver|0| 
+|charlotte|2| 
