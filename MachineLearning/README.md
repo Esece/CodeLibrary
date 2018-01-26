@@ -1,6 +1,7 @@
 ## MachineLearning
 
 ### KMeansClustering
+Pattern recognition
 
 Data:
 
