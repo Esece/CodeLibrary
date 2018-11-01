@@ -36,5 +36,13 @@ namespace Esece.Extensions
         {
             return source.Split(separators, StringSplitOptions.None);
         }
+        
+        /// <summary>
+        /// Creates a simple GUID from a string value. Like String.GetHashCode(), very rarely collision can occur.
+        /// </summary>
+        public static Guid GetGuidHashCode(this string value)
+        {
+            return new Guid(System.Security.Cryptography.MD5.Create().ComputeHash(System.Text.Encoding.UTF8.GetBytes(value)));
+        }
     }
 }
